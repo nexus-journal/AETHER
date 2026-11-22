@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - 'AETHER_ANDROID_PROJECT.zip.'
+      - 'AETHER_ANDROID_PROJECT_V0.2.0.zip'
   workflow_dispatch:
 
 permissions:
@@ -41,10 +41,10 @@ jobs:
           gradle-version: '8.13'
 
       - name: Check Android project archive
-        run: test -f 'AETHER_ANDROID_PROJECT.zip.'
+        run: test -f 'AETHER_ANDROID_PROJECT_V0.2.0.zip'
 
       - name: Extract Android project
-        run: unzip -q 'AETHER_ANDROID_PROJECT.zip.' -d android-project
+        run: unzip -q 'AETHER_ANDROID_PROJECT_V0.2.0.zip' -d android-project
 
       - name: Build debug APK
         working-directory: android-project/AETHER_ANDROID_PROJECT
